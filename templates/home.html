@@ -1,0 +1,66 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+{% for product in object_list %}
+<div class="container py-5">
+<div class="card bg-success mb-3" style="max-width: 18rem;">  
+        <div class="card-body text-center text-white">  
+            <a href="{% url 'product-detail' product.id %}"><h5 class="text-center">{{product.name}}</h5></a>  
+            <p class="card-text">{{product.price}}</p> 
+            <p class="card-text">some quick details about the product</p> 
+        </div>  
+</div>
+</div>               
+{% endfor %}
+    
+
+<!-- <div class="container">  
+      <h4>Our products</h4>  
+      <div class="card-columns">  
+          <div class="card bg-dark">  
+              <div class="card-body text-center text-white">  
+                  <a href='#'><h5 class="text-center">T-shirt</h5></a>  
+                  <p class="card-text">price: 5$</p>  
+              </div>  
+          </div>  
+          <div class="card bg-warning">  
+              <div class="card-body text-center text-white">  
+                  <a href='#'><h5 class="text-center">Shoes</h5></a> 
+                  <p class="card-text">price: 25$</p>  
+              </div>  
+          </div>  
+          <div class="card bg-warning">  
+              <div class="card-body text-center text-white">  
+                  <a href='#'><h5 class="text-center">Dress</h5></a>  
+                  <p class="card-text">price: 12$</p>  
+              </div>  
+          </div>  
+          <div class="card bg-dark">  
+              <div class="card-body text-center text-white">
+  <a href='#'><h5 class="text-center">Shirt </h5></a>
+    
+                  <p class="card-text">price: 8$</p>  
+              </div>  
+          </div>  
+          <div class="card bg-dark">  
+              <div class="card-body text-center text-white">  
+                  <a href='#'><h5 class="text-center">Tops</h5></a>  
+                  <p class="card-text">price: 4$</p>  
+              </div>  
+          </div>  
+          <div class="card bg-warning">  
+              <div class="card-body text-center text-white">  
+                  <a href='#'><h5 class="text-center">Pants</h5></a> 
+                  <p class="card-text">price: 9$</p>  
+              </div>  
+          </div>  
+      </div>  
+  </div>  -->
+          
+
+{% endblock content %}
+    
+              
+              
+    
